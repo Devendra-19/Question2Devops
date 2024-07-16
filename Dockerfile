@@ -9,7 +9,7 @@ COPY src ./src
 RUN mvn clean test
 
 RUN mkdir -p /usr/src/app/target/surefire-reports
-RUN cp -R /usr/src/app/target/surefire-reports /usr/src/app/target/surefire-reports
-
 WORKDIR /usr/src/app/target/surefire-reports
+
+
 CMD ["mvn","test"]
